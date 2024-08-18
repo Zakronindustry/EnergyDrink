@@ -34,3 +34,27 @@
     --rotate: -0.15turn;
     }
 }
+
+
+
+.soda {
+  --left:0px;
+  z-index: 2;
+  width: 100%; /* Ensure it takes up space */
+  height: 100%; /* Ensure it takes up space */
+  background: url('./assets/REGAL.png')  var(--left) 0,
+              url('./assets/can.png') no-repeat center center;
+  background-size: auto 100%; /* or auto, contain depending on your preference */
+  width: 178px;
+  height:362px;
+  background-blend-mode: multiply;
+  mask-image:url('./assets/can.png');
+  mask-size:auto 100%;
+  transition: 0.7s;
+}
+
+.soda:hover{
+
+  --left:-500px;
+  transform: translateY(-60px);
+}

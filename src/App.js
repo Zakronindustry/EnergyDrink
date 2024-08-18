@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 
+
 function App() {
   return (
    <div className="body bg-[url('./assets/bg.jpg')] bg-cover flex flex-col h-screen w-full border-2 border-white">
@@ -23,7 +24,9 @@ function App() {
      <div className="flex font-bold border-2 justify-center border-white h-full w-[50%] light">VORTEX</div>
     </div>
     <div className="flex justify-center h-full w-full border-2 border-white">
-     <div className="flex h-full w-[30%] border-2 border-white">
+     <div className="flex justify-center items-center  h-full w-[30%] border-2 border-white">
+      <div className="soda">
+      </div>
      </div>
     </div>
    </div>
