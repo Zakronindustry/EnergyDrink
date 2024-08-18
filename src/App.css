@@ -11,7 +11,7 @@
 }
 
 .light {
-
+  z-index: 1;
   background-image: 
   conic-gradient(
     from var(--rotate) at 49% 10%,
@@ -39,7 +39,7 @@
 
 .soda {
   --left:0px;
-  z-index: 2;
+  z-index: 3;
   width: 100%; /* Ensure it takes up space */
   height: 100%; /* Ensure it takes up space */
   background: url('./assets/REGAL.png')  var(--left) 0,
@@ -57,4 +57,55 @@
 
   --left:-500px;
   transform: translateY(-60px);
+}
+.stage {
+  position: absolute; /* Ensure it's positioned relative to its container */
+  bottom: 15px; /* Adjust as needed; negative values can push it out of view */
+  left: 39%; /* Adjust as needed */
+  z-index: 2; /* Ensure this value is appropriate for your layout */
+  width: 330px; /* Adjust size as needed */
+  height: 120px;
+  background: url('./assets/stage.png') no-repeat center center;
+  background-size: cover; /* Adjust to fit your layout */
+  transition: transform 0.7s;
+}
+
+.container:hover .stage{
+  transform:translateY(10px);
+}
+
+.ice{
+  position: absolute; /* Ensure it's positioned relative to its container */
+  bottom: 90px; /* Adjust as needed; negative values can push it out of view */
+  left: 42%; /* Adjust as needed */
+  z-index: 3; /* Ensure this value is appropriate for your layout */
+  width: 117px; /* Adjust size as needed */
+  height: 100px;
+  background: url('./assets/icecubes.png') no-repeat center center;
+  background-size: cover; /* Adjust to fit your layout */
+  transition: transform 0.7s;
+}
+
+.ice1{
+  position: absolute; /* Ensure it's positioned relative to its container */
+  bottom: 90px; /* Adjust as needed; negative values can push it out of view */
+  left: 50%; /* Adjust as needed */
+  z-index: 3; /* Ensure this value is appropriate for your layout */
+  width: 117px; /* Adjust size as needed */
+  height: 100px;
+  background: url('./assets/icecubes.png') no-repeat center center;
+  background-size: cover; /* Adjust to fit your layout */
+  transition: transform 0.7s;
+  transform: scaleX(-1);
+
+}
+
+.container:hover .ice{
+  transform: translateX(20px);
+
+}
+
+.container:hover .ice1{
+  transform: translateX(-20px) scaleX(-1);
+
 }

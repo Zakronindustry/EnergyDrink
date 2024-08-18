@@ -24,9 +24,12 @@ function App() {
      <div className="flex font-bold border-2 justify-center border-white h-full w-[50%] light">VORTEX</div>
     </div>
     <div className="flex justify-center h-full w-full border-2 border-white">
-     <div className="flex justify-center items-center  h-full w-[30%] border-2 border-white">
+     <div className="container flex justify-center items-center  h-full w-[12%] border-2 border-white">
       <div className="soda">
       </div>
+      <div className="absolute stage"></div>
+      <div className="ice"></div>
+      <div className="ice1"></div>
      </div>
     </div>
    </div>
