@@ -10,14 +10,28 @@
   inherits: false;
 }
 
+.gradient-text {
+  background: linear-gradient(90deg, #ff0000, #000080); /* Initial gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: background-position 0.5s ease;
+  background-size: 200% 100%;
+  background-position: -100% 0; /* Start position of the gradient */
+}
+
+.gradient-text:hover {
+   background-position: 100% 0; /* End position of the gradient */
+}
+
 .light {
   z-index: 1;
   background-image: 
   conic-gradient(
     from var(--rotate) at 49% 10%,
-    #ffffff 30%,
-    #0000ff55,
-    #ffffff 70%
+    #000080 30%,
+    #FFFFF055,
+    #000080 70%
   );
   background-clip:text;
   font-size: 120px;
@@ -45,8 +59,8 @@
   background: url('./assets/REGAL.png')  var(--left) 0,
               url('./assets/can.png') no-repeat center center;
   background-size: auto 100%; /* or auto, contain depending on your preference */
-  width: 178px;
-  height:362px;
+  width: 200px;
+  height:410px;
   background-blend-mode: multiply;
   mask-image:url('./assets/can.png');
   mask-size:auto 100%;
@@ -54,19 +68,19 @@
 }
 
 .soda:hover{
-
+  
   --left:-500px;
   transform: translateY(-60px);
 }
 .stage {
-  position: absolute; /* Ensure it's positioned relative to its container */
-  bottom: 15px; /* Adjust as needed; negative values can push it out of view */
-  left: 39%; /* Adjust as needed */
-  z-index: 2; /* Ensure this value is appropriate for your layout */
-  width: 330px; /* Adjust size as needed */
-  height: 120px;
+  position: absolute; 
+  bottom: 43px; 
+  left: 12%; 
+  z-index: 2; 
+  width: 360px; 
+  height: 131px;
   background: url('./assets/stage.png') no-repeat center center;
-  background-size: cover; /* Adjust to fit your layout */
+  background-size: cover; 
   transition: transform 0.7s;
 }
 
@@ -74,38 +88,44 @@
   transform:translateY(10px);
 }
 
-.ice{
-  position: absolute; /* Ensure it's positioned relative to its container */
-  bottom: 90px; /* Adjust as needed; negative values can push it out of view */
-  left: 42%; /* Adjust as needed */
-  z-index: 3; /* Ensure this value is appropriate for your layout */
-  width: 117px; /* Adjust size as needed */
-  height: 100px;
-  background: url('./assets/icecubes.png') no-repeat center center;
-  background-size: cover; /* Adjust to fit your layout */
-  transition: transform 0.7s;
-}
-
-.ice1{
-  position: absolute; /* Ensure it's positioned relative to its container */
-  bottom: 90px; /* Adjust as needed; negative values can push it out of view */
-  left: 50%; /* Adjust as needed */
-  z-index: 3; /* Ensure this value is appropriate for your layout */
-  width: 117px; /* Adjust size as needed */
-  height: 100px;
-  background: url('./assets/icecubes.png') no-repeat center center;
-  background-size: cover; /* Adjust to fit your layout */
-  transition: transform 0.7s;
-  transform: scaleX(-1);
+.hover-text {
+    font-family: 'Commissioner',sans-serif;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 50px;
+    color: #000080; 
+    z-index: 3;
 
 }
 
-.container:hover .ice{
-  transform: translateX(20px);
+
+
+.hover-sub{
+    font-family: 'Commissioner',sans-serif;
+    transform: translateX(-10px);
+    font-weight: 100;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 20px;
+    color: #000080; 
+    z-index: 3;  
+}
+
+.anim {
+  opacity: 0;
 
 }
 
-.container:hover .ice1{
-  transform: translateX(-20px) scaleX(-1);
+.container:hover + .anim{
+  opacity: 0.8;
+  transform: translateX(0px);
+}
 
+.mina{
+  z-index: 4;
+  opacity: 1;
+}
+
+.container:hover + .mina{
+  opacity: 0;
+  transform: translateX(0px);
 }
